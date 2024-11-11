@@ -1,0 +1,28 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+.accordionItem {
+    border: 1px solid #ccc;
+    min-width: 300px;
+}
+
+.accordionHeader {
+    padding: 7px;
+}
+
+.accordionContent {
+    border-top: 1px solid #ccc;
+    background-color:#999 ;
+    padding: 7px;
+}
+
+p {
+    margin: 0;
+}

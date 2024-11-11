@@ -39,6 +39,9 @@ document.addEventListener("DOMContentLoaded", function () {
             })
         })
 
+// matches function not working and rest of the code is set to run.
+        
+
         function openTabs(tabId) {
             const tabContents = document.querySelectorAll(".tabContent");
             const tabLinks = document.querySelectorAll("tabLinks");
@@ -54,3 +57,4 @@ document.addEventListener("DOMContentLoaded", function () {
 }
     renderTabs();
 });
+
