@@ -1,0 +1,41 @@
+.carosel-container {
+    height: 40vh;
+    width: 50vw;
+}
+
+.carosel {
+  position: relative;  
+  height: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.image-container {
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+    transition: transform 0.5s ease-in-out;
+}
+
+.image {
+    height: 100%;
+}
+
+.btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #edeaea;
+    color: #222;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
