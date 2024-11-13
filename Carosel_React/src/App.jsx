@@ -45,3 +45,8 @@ function App() {
 }
 
 export default App;
+
+
+//The complete images are not loading
+//The optional button component is not working
+//The onClick functionality index parameter is not defined ?
