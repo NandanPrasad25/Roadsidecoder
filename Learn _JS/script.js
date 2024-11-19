@@ -1,7 +1,7 @@
 // 1.  Var, Let, Const
 
 // function scope , Block scope, Global scope
-// Variable Shadowing - Can shadow var variable with let but not let variable with var ( illigal Shadowing )
+// Variable Shadowing - Can shadow var variable with let but not let variable with var ( illigal Shadowing ).
 
 // Declaration
 // Can redeclare var as many times but not let and const
@@ -15,7 +15,7 @@
 // Javascript execution context
 // creation phase - creates global or window object - setups memory heap for storing variables & function references - initialize functions & variables declarations with undefined - it stores entire functions.
 
-//HOisting
+//Hoisting
 //Var variables are hoisted and can be accesible before but with undefined
 //let variables are also hoisted but stored in temporal dead zone ( time between declaration and initialization of let and const variables)
 

@@ -1,7 +1,6 @@
 /* eslint-disable react/prop-types */
-const Pagination = ({ products, page, setPage, maxVisiblePage=10 }) => {
-    const totalPages = Math.ceil(products.length / 10)
-
+const Pagination = ({ products, page, setPage, maxVisiblePage = 10 }) => {
+  const totalPages = Math.ceil(products.length / 10);
 
   const selectPageHandler = (selectedPage) => {
     if (
@@ -15,27 +14,27 @@ const Pagination = ({ products, page, setPage, maxVisiblePage=10 }) => {
   const renderPageNumbers = () => {
     let pageNumbers = [];
 
-    if ( totalPages <= maxVisiblePage) {
-        for(let i=1; i<=totalPages; i++) {
-            pageNumbers.push(renderPageKey(i))
-        }
+    if (totalPages <= maxVisiblePage) {
+      for (let i = 1; i <= totalPages; i++) {
+        pageNumbers.push(renderPageKey(i));
+      }
     } else {
-        const startPage = Math.max(1, page - Math.floor(maxVisiblePage / 2));
-        const endPage = Math.min(totalPages, startPage + maxVisiblePage - 1 );
+      const startPage = Math.max(1, page - Math.floor(maxVisiblePage / 2));
+      const endPage = Math.min(totalPages, startPage + maxVisiblePage - 1);
 
-        if (startPage > 1) {
-            if(startPage > 2) pageNumbers.push(renderPageKey("1"));
-            pageNumbers.push(renderPageKey("...", "ellipsis-start"))
-        }
+      if (startPage > 1) {
+        if (startPage > 2) pageNumbers.push(renderPageKey("1"));
+        pageNumbers.push(renderPageKey("...", "ellipsis-start"));
+      }
 
-        for(let i = startPage; i <= endPage; i++) {
-            pageNumbers.push(renderPageKey(i))
-        }
+      for (let i = startPage; i <= endPage; i++) {
+        pageNumbers.push(renderPageKey(i));
+      }
 
-        if(endPage < totalPages) {
-            pageNumbers.push(renderPageKey("...", "ellipsis-end"));
-            if(endPage < totalPages + 1) pageNumbers.push(totalPages -1)
-        }
+      if (endPage < totalPages) {
+        pageNumbers.push(renderPageKey("...", "ellipsis-end"));
+        if (endPage < totalPages + 1) pageNumbers.push(totalPages - 1);
+      }
     }
 
     return pageNumbers;
@@ -43,7 +42,10 @@ const Pagination = ({ products, page, setPage, maxVisiblePage=10 }) => {
 
   const renderPageKey = (currPage, key) => {
     return (
-      <span key={key} className={page === currPage ? "pagination__selected" : ""}>
+      <span
+        key={key}
+        className={page === currPage ? "pagination__selected" : ""}
+      >
         {currPage}
       </span>
     );

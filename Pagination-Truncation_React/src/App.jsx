@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
 import Pagination from "./components/pagination";
 
@@ -6,13 +7,13 @@ function App() {
   const [page, setPage] = useState(1);
 
   const fetchProducts = async () => {
-  let skip = page*10 - 10
+    let skip = page * 10 - 10;
     try {
       const res = await fetch(
         `https://dummyjson.com/products?_limit=10&skip=${skip}`
       );
       const data = await res.json();
-      console.log(skip)
+      console.log(skip);
 
       if (data && data.products) {
         setProducts(data.products);
@@ -27,8 +28,6 @@ function App() {
     fetchProducts();
   }, [page]);
 
-  
-
   return (
     <>
       {" "}
@@ -42,7 +41,7 @@ function App() {
           ))}
       </div>
       {products.length > 0 && (
-      <Pagination products={products} page={page} setPage={setPage} />
+        <Pagination products={products} page={page} setPage={setPage} />
       )}
     </>
   );

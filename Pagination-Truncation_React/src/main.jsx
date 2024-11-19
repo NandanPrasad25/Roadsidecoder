@@ -1,14 +1,13 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css';
-import App from './App.jsx';
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import "./index.css";
+import App from "./App.jsx";
 
-createRoot(document.getElementById('root')).render(
+createRoot(document.getElementById("root")).render(
   <StrictMode>
     <App />
-  </StrictMode>,
-)
-
+  </StrictMode>
+);
 
 //Fetch products
 //Render the products using map method
@@ -18,4 +17,6 @@ createRoot(document.getElementById('root')).render(
 //A function to set the page on click
 //conditional classname for selected page
 //forward and back functionality with disappear the buttons after limit cross
-//If app is backend driven we dont know how many products there, so we use skip in api params
+//If app is backend driven we dont know how many products there, so we use skip in api params - also performant driven as we don't have to fetch all the products at once
+//pagination component - logic seperate
+//truncation logic
