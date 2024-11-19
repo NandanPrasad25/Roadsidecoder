@@ -37,8 +37,6 @@ function App() {
 
   const handleScroll = () => {
     if ( window.innerHeight + document.documentElement.scrollTop + 500 > document.documentElement.offsetHeight && !loading ) {
-      console.log("Api call")
-      console.log(window.innerHeight, document.documentElement.scrollTop, document.documentElement.offsetHeight, products.limit, products.total);
       fetchProducts();
     }
   };
