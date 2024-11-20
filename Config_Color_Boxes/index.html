@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
     <title>Config color boxes</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <form class="boxForm">
+        <input type="color" id="colorInput" title="Choose box color">
+        <input type="number" id="widthInput" placeholder="Enter box width (%)" min="1" max="100">
+        <button type="submit">Add Box</button>
+    </form>
+  </body>
 </html>
