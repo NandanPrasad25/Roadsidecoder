@@ -1,0 +1,11 @@
+* {
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+a {
+    color: #143D90;
+    padding: 10px 20px;
+    text-decoration: inherit;
+}
+
